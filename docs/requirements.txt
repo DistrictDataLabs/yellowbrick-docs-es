@@ -1,0 +1,13 @@
+# Library Dependencies
+matplotlib>=3.3
+scipy>=1.6.0
+scikit-learn>=1.0.0
+numpy>=1.16.0
+cycler>=0.10.0
+
+# Documentation Dependencies
+Sphinx>=3.4
+sphinx-rtd-theme>=0.5.1
+numpydoc>=1.1
+pandas>=1.0.4
+umap-learn>=0.5.3

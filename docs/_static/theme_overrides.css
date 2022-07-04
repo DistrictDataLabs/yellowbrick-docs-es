@@ -1,0 +1,23 @@
+/* override table width restrictions */
+@media screen and (min-width: 767px) {
+
+   .wy-table-responsive table td {
+      /* !important prevents the common CSS stylesheets from overriding
+         this as on RTD they are loaded after this stylesheet */
+      white-space: normal !important;
+   }
+
+   .wy-table-responsive {
+      overflow: visible !important;
+   }
+}
+
+/* Add padding to the parameters list on RTD theme */
+dl.simple dt {
+   padding-left: 4px;
+}
+
+dl.simple dt span.classifier {
+   padding-left: 6px;
+   font-weight: normal;
+}

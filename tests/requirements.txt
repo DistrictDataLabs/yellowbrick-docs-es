@@ -1,0 +1,28 @@
+# Test requirements are fixed in order to make CI tests less susceptible to
+# dependency changes. Test dependencies should be reviewed frequently so that
+# we're testing against the latest versions of our dependencies that our users
+# are probably using. We recommend monitoring Libraries.io to alert for changes.
+
+# Library Dependencies
+matplotlib==3.4.2
+scipy==1.7.0
+scikit-learn==1.0.0
+numpy==1.21.0
+cycler==0.10.0
+
+# Testing Requirements
+pytest==6.2.4
+pytest-cov==2.12.1
+pytest-flakes==4.0.3
+pytest-spec>=2.0.0
+coverage==5.5
+
+# Optional Testing Dependencies
+nltk==3.6.7
+# spacy>=2.0.18
+pandas==1.3.0
+umap-learn==0.5.1
+
+# Third-Party Estimator Tests
+# xgboost==1.2.0
+# catboost==0.24.1

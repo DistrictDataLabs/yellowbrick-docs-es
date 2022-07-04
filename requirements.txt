@@ -1,0 +1,27 @@
+## Dependencies
+matplotlib>=2.0.2,!=3.0.0
+scipy>=1.0.0
+scikit-learn>=1.0.0
+numpy>=1.16.0
+cycler>=0.10.0
+
+## Optional Dependencies (uncomment to use)
+# nltk>=3.2
+# pandas>=1.0.4
+# umap-learn>=0.5
+
+## Testing Requirements (pip install -r tests/requirements.txt)
+# pytest>=6.1
+# pytest-cov>=2.10
+# pytest-flakes>=4.0.0
+# pytest-spec>=3.0
+# coverage>=5.3
+
+## Documentation (pip install -r docs/requirements.txt)
+# Sphinx>=3.4
+# sphinx-rtd-theme>=0.5.1
+# numpydoc>=1.1
+
+## Build Requirements (uncomment for deployment)
+# wheel>=0.35
+# twine>=3.3
