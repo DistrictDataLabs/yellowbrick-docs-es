@@ -12,39 +12,39 @@
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/DistrictDataLabs/yellowbrick/develop?filepath=examples%2Fexamples.ipynb)
 
 
-**Visual analysis and diagnostic tools to facilitate machine learning model selection.**
+**Herramientas de análisis visual y diagnóstico para facilitar la selección de modelos de machine learning.**
 
 [![Banner](docs/images/readme/banner.png)](https://www.scikit-yb.org/en/latest/gallery.html)
 
-## What is Yellowbrick?
+## ¿Qué es Yellowbrick?
 
-Yellowbrick is a suite of visual diagnostic tools called "Visualizers" that extend the scikit-learn API to allow human steering of the model selection process. In a nutshell, Yellowbrick combines scikit-learn with matplotlib in the best tradition of the scikit-learn documentation, but to produce visualizations for _your_ machine learning workflow!
+Yellowbrick es un conjunto de herramientas de diagnóstico visual llamadas "Visualizadores" que extienden la API scikit-learn para permitir la dirección humana del proceso de selección del modelo. En pocas palabras, Yellowbrick combina scikit-learn con matplotlib en la mejor tradición de la documentación scikit-learn, ¡pero para producir visualizaciones para _su_ flujo de trabajo de machine learning!
 
-For complete documentation on the Yellowbrick API, a gallery of available visualizers, the contributor's guide, tutorials and teaching resources, frequently asked questions, and more, please visit our documentation at [www.scikit-yb.org](https://www.scikit-yb.org/).
+Para obtener documentación completa sobre la API de Yellowbrick, una galería de visualizadores disponibles, la guía del colaborador, tutoriales y recursos de enseñanza, preguntas frecuentes y más, visite nuestra documentación en [www.scikit-yb.org](https://www.scikit-yb.org/).
 
-## Installing Yellowbrick
+## Instalación de Yellowbrick
 
-Yellowbrick is compatible with Python 3.4 or later and also depends on scikit-learn and matplotlib. The simplest way to install Yellowbrick and its dependencies is from PyPI with pip, Python's preferred package installer.
+Yellowbrick es compatible con Python 3.4 o posterior y también depende de scikit-learn y matplotlib. La forma más sencilla de instalar Yellowbrick y sus dependencias es desde PyPI con pip, el instalador de paquetes preferido de Python.
 
     $ pip install yellowbrick
 
-Note that Yellowbrick is an active project and routinely publishes new releases with more visualizers and updates. In order to upgrade Yellowbrick to the latest version, use pip as follows.
+Ten en cuenta que Yellowbrick es un proyecto activo y publica rutinariamente nuevas versiones con más visualizadores y actualizaciones. Para actualizar Yellowbrick a la última versión, use pip de la siguiente manera.
 
     $ pip install -U yellowbrick
 
-You can also use the `-U` flag to update scikit-learn, matplotlib, or any other third party utilities that work well with Yellowbrick to their latest versions.
+También puedes usar la bandera `-U` para actualizar scikit-learn, matplotlib o cualquier otra utilidad de terceros que funcione bien con Yellowbrick en sus últimas versiones.
 
-If you're using Anaconda (recommended for Windows users), you can take advantage of the conda utility to install Yellowbrick:
+Si estás utilizando Anaconda (recomendado para usuarios de Windows), puedes aprovechar la utilidad conda para instalar Yellowbrick:
 
     conda install -c districtdatalabs yellowbrick
 
-## Using Yellowbrick
+## Usando Yellowbrick
 
-The Yellowbrick API is specifically designed to play nicely with scikit-learn. Here is an example of a typical workflow sequence with scikit-learn and Yellowbrick:
+La API de Yellowbrick está diseñada específicamente para llevarse bien con scikit-learn. Aquí hay un ejemplo de una secuencia de flujo de trabajo típica con scikit-learn y Yellowbrick:
 
-### Feature Visualization
+### Visualización de características
 
-In this example, we see how Rank2D performs pairwise comparisons of each feature in the data set with a specific metric or algorithm and then returns them ranked as a lower left triangle diagram.
+En este ejemplo, vemos cómo Rank2D realiza comparaciones por pares de cada característica del conjunto de datos con una métrica o algoritmo específico y luego las devuelve clasificadas como un diagrama de triángulo izquierdo inferior.
 
 ```python
 from yellowbrick.features import Rank2D
@@ -52,14 +52,14 @@ from yellowbrick.features import Rank2D
 visualizer = Rank2D(
     features=features, algorithm='covariance'
 )
-visualizer.fit(X, y)                # Fit the data to the visualizer
-visualizer.transform(X)             # Transform the data
-visualizer.show()                   # Finalize and render the figure
+visualizer.fit(X, y)                # Ajuste los datos al visualizador
+visualizer.transform(X)             # Transformar los datos
+visualizer.show()                   # Finalizar y representar la figura
 ```
 
-### Model Visualization
+### Visualización del modelo
 
-In this example, we instantiate a scikit-learn classifier and then use Yellowbrick's ROCAUC class to visualize the tradeoff between the classifier's sensitivity and specificity.
+En este ejemplo, creamos una instancia de un clasificador scikit-learn y luego usamos la clase ROCAUC de Yellowbrick para visualizar la compensación entre la sensibilidad y la especificidad del clasificador.
 
 ```python
 from sklearn.svm import LinearSVC
@@ -72,48 +72,48 @@ visualizer.score(X,y)
 visualizer.show()
 ```
 
-For additional information on getting started with Yellowbrick, view the [Quick Start Guide](https://www.scikit-yb.org/en/latest/quickstart.html) in the [documentation](https://www.scikit-yb.org/en/latest/) and check out our [examples notebook](https://github.com/DistrictDataLabs/yellowbrick/blob/develop/examples/examples.ipynb).
+Para obtener información adicional sobre cómo comenzar con Yellowbrick, consulte la [Guía de inicio rápido](https://www.scikit-yb.org/en/latest/quickstart.html) en la [documentación](https://www.scikit-yb.org/en/latest/) y consulte nuestro [libro de ejemplos](https://github.com/DistrictDataLabs/yellowbrick/blob/develop/examples/examples.ipynb).
 
-## Contributing to Yellowbrick
+## Contribuyendo a Yellowbrick
 
-Yellowbrick is an open source project that is supported by a community who will gratefully and humbly accept any contributions you might make to the project. Large or small, any contribution makes a big difference; and if you've never contributed to an open source project before, we hope you will start with Yellowbrick!
+Yellowbrick es un proyecto de código abierto que cuenta con el apoyo de una comunidad que aceptará con gratitud y humildad cualquier contribución que hagas al proyecto. Grande o pequeña, cualquier contribución hace una gran diferencia; y si nunca antes has contribuido a un proyecto de código abierto, ¡esperamos que comiences con Yellowbrick!
 
-If you are interested in contributing, check out our [contributor's guide](https://www.scikit-yb.org/en/latest/contributing/index.html). Beyond creating visualizers, there are many ways to contribute:
+Si estás interesado en contribuir, consulte nuestra [guía del colaborador](https://www.scikit-yb.org/en/latest/contributing/index.html). Más allá de crear visualizadores, hay muchas formas de contribuir:
 
-- Submit a bug report or feature request on [GitHub Issues](https://github.com/DistrictDataLabs/yellowbrick/issues).
-- Contribute a Jupyter notebook to our examples [gallery](https://github.com/DistrictDataLabs/yellowbrick/tree/develop/examples).
-- Assist us with [user testing](https://www.scikit-yb.org/en/latest/evaluation.html).
-- Add to the documentation or help with our website, [scikit-yb.org](https://www.scikit-yb.org).
-- Write [unit or integration tests](https://www.scikit-yb.org/en/latest/contributing/developing_visualizers.html#integration-tests) for our project.
-- Answer questions on our issues, mailing list, Stack Overflow, and elsewhere.
-- Translate our documentation into another language.
-- Write a blog post, tweet, or share our project with others.
-- [Teach](https://www.scikit-yb.org/en/latest/teaching.html) someone how to use Yellowbrick.
+- Enviar un informe de error o una solicitud de función en [Problemas de GitHub](https://github.com/DistrictDataLabs/yellowbrick/issues).
+- Contribuir con un cuaderno Jupyter a nuestros ejemplos [galería](https://github.com/DistrictDataLabs/yellowbrick/tree/develop/examples).
+- Ayudarnos con [pruebas de usuario](https://www.scikit-yb.org/en/latest/evaluation.html).
+- Ayudar con la documentación o ayudar con nuestro sitio web, [scikit-yb.org](https://www.scikit-yb.org).
+- Escribir [pruebas unitarias o de integración](https://www.scikit-yb.org/en/latest/contributing/developing_visualizers.html#integration-tests) para nuestro proyecto.
+- Responda preguntas sobre nuestros problemas, lista de correo, Stack Overflow y otros lugares.
+- Traducir nuestra documentación a otro idioma.
+- Escribir una publicación de blog, tuitear o compartir nuestro proyecto con otros.
+- [Enseñar](https://www.scikit-yb.org/en/latest/teaching.html) a alguien cómo usar Yellowbrick.
 
-As you can see, there are lots of ways to get involved and we would be very happy for you to join us! The only thing we ask is that you abide by the principles of openness, respect, and consideration of others as described in the [Python Software Foundation Code of Conduct](https://www.python.org/psf/codeofconduct/).
+Como puedes ver, hay muchas maneras de involucrarse y estaremos muy contentos de que te unas a nosotros. Lo único que le pedimos es que cumplas con los principios de apertura, respeto y consideración de los demás como se describe en el [Código de conducta de Python Software Foundation](https://www.python.org/psf/codeofconduct/).
 
-For more information, checkout the `CONTRIBUTING.md` file in the root of the repository or the detailed documentation at [Contributing to Yellowbrick](https://www.scikit-yb.org/en/latest/contributing/index.html)
+Para obtener más información, consulte el archivo `CONTRIBUTING.md` en la raíz del almacén de datos o la documentación detallada en [Contribución a Yellowbrick](https://www.scikit-yb.org/en/latest/contributing/index.html)
 
-## Yellowbrick Datasets
+## Conjuntos de datos de Yellowbrick
 
-Yellowbrick gives easy access to several datasets that are used for the examples in the documentation and testing. These datasets are hosted in our CDN and must be downloaded for use. Typically, when a user calls one of the data loader functions, e.g. `load_bikeshare()` the data is automatically downloaded if it's not already on the user's computer. However, for development and testing, or if you know you will be working without internet access, it might be easier to simply download all the data at once.
+Yellowbrick proporciona un fácil acceso a varios conjuntos de datos que se utilizan para los ejemplos en la documentación y las pruebas. Estos conjuntos de datos están alojados en nuestra CDN y deben descargarse para su uso. Por lo general, cuando un usuario llama a una de las funciones de carga de datos, por ejemplo, `load_bikeshare()` los datos se descargan automáticamente si aún no están en la computadora del usuario. Sin embargo, para el desarrollo y las pruebas, o si sabe que trabajará sin acceso a Internet, podría ser más fácil simplemente descargar todos los datos de una vez.
 
-The data downloader script can be run as follows:
+El script del descargador de datos se puede ejecutar de la siguiente manera:
 
     $ python -m yellowbrick.download
 
-This will download the data to the fixtures directory inside of the Yellowbrick site packages. You can specify the location of the download either as an argument to the downloader script (use `--help` for more details) or by setting the `$YELLOWBRICK_DATA` environment variable. This is the preferred mechanism because this will also influence how data is loaded in Yellowbrick.
+Esto descargará los datos al directorio de accesorios dentro de los paquetes del sitio Yellowbrick. Puedes especificar la ubicación de la descarga como un argumento para el script del descargador (use `--help` para obtener más detalles) o estableciendo la variable de entorno `$YELLOWBRICK_DATA` . Este es el mecanismo preferido porque también influirá en cómo se cargan los datos en Yellowbrick.
 
-_Note: Developers who have downloaded data from Yellowbrick versions earlier than v1.0 may experience some problems with the older data format. If this occurs, you can clear out your data cache as follows:_
+_Nota: Los desarrolladores que han descargado datos de versiones anteriores a v1.0 pueden experimentar algunos problemas con el formato de datos anterior. Si esto ocurre, puedes borrar la memoria caché de datos de la siguiente manera:_
 
     $ python -m yellowbrick.download --cleanup
 
-_This will remove old datasets and download the new ones. You can also use the `--no-download` flag to simply clear the cache without re-downloading data. Users who are having difficulty with datasets can also use this or they can uninstall and reinstall Yellowbrick using `pip`._
+_ Esto eliminará los conjuntos de datos antiguos y descargará los nuevos. También puedes usar la bandera `--no-download` para simplemente borrar la caché sin volver a descargar datos. Los usuarios que tienen dificultades con los conjuntos de datos también pueden usar esto o pueden desinstalar y reinstalar Yellowbrick usando `pip`._
 
-## Citing Yellowbrick
+## Citando a Yellowbrick
 
-We would be glad if you used Yellowbrick in your scientific publications! If you do, please cite us using the [citation guidelines](https://www.scikit-yb.org/en/latest/about.html#citing-yellowbrick).
+¡Estaríamos encantados de que usaras Yellowbrick en tus publicaciones científicas! Si lo haces, por favor cita nuestro proyecto usando las [pautas de citación](https://www.scikit-yb.org/en/latest/about.html#citing-yellowbrick).
 
-## Affiliations
+## Afiliaciones
 
 [![District Data Labs](docs/images/readme/affiliates_ddl.png)](https://districtdatalabs.com/) [![NumFOCUS Affiliated Project](docs/images/readme/affiliates_numfocus.png)](https://numfocus.org)

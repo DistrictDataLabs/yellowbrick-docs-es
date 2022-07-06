@@ -1,135 +1,134 @@
-About
-=====
+Acerca de nosotros
+==================
 
 .. image:: images/yellowbrickroad.jpg
 
-Image by QuatroCinco_, used with permission, Flickr Creative Commons.
+Imagen de QuatroCinco_, usada con permiso de Flickr Creative Commons.
 
-Yellowbrick is an open source, pure Python project that extends the scikit-learn API_ with visual analysis and diagnostic tools. The Yellowbrick API also wraps matplotlib to create publication-ready figures and interactive data explorations while still allowing developers fine-grain control of figures. For users, Yellowbrick can help evaluate the performance, stability, and predictive value of machine learning models and assist in diagnosing problems throughout the machine learning workflow.
+Yellowbrick es un proyecto Python puro de código abierto que extiende el API_ scikit-learn con herramientas de análisis visual y diagnóstico. La API de Yellowbrick también envuelve matplotlib para crear figuras listas para su publicación y exploraciones de datos interactivas, al mismo tiempo que permite a los desarrolladores un control detallado de las figuras. Para los usuarios, Yellowbrick puede ayudar a evaluar el rendimiento, la estabilidad y el valor predictivo de los modelos de machine learning y ayudar a diagnosticar problemas a lo largo del flujo de trabajo de machine learning.
 
-Recently, much of this workflow has been automated through grid search methods, standardized APIs, and GUI-based applications. In practice, however, human intuition and guidance can more effectively hone in on quality models than exhaustive search. By visualizing the model selection process, data scientists can steer towards final, explainable models and avoid pitfalls and traps.
+Recientemente, gran parte de este flujo de trabajo se ha automatizado a través de métodos de búsqueda en cuadrícula, API estandarizadas y aplicaciones basadas en GUI. En la práctica, sin embargo, la intuición y la orientación humanas pueden perfeccionar los modelos de calidad de manera más efectiva que la búsqueda exhaustiva. Al visualizar el proceso de selección de modelos, los datos científicos pueden dirigirse hacia modelos finales y explicables y evitar dificultades y trampas.
 
-The Yellowbrick library is a diagnostic visualization platform for machine learning that allows data scientists to steer the model selection process. It extends the scikit-learn API with a new core object: the Visualizer. Visualizers allow visual models to be fit and transformed as part of the scikit-learn pipeline process, providing visual diagnostics throughout the transformation of high-dimensional data.
+La biblioteca Yellowbrick es una plataforma de visualización de diagnóstico para el machine learning que permite a los científicos de datos dirigir el procedimiento de selección de modelos. Amplía la API scikit-learn con un nuevo objeto central: el Visualizador. Los visualizadores permiten que los modelos visuales se ajusten y transformen como parte del proceso de canalización scikit-learn, proporcionando diagnósticos visuales a lo largo de la transformación de datos de alta dimensión.
 
-Model Selection
----------------
-Discussions of machine learning are frequently characterized by a singular focus on model selection. Be it logistic regression, random forests, Bayesian methods, or artificial neural networks, machine learning practitioners are often quick to express their preference. The reason for this is mostly historical. Though modern third-party machine learning libraries have made the deployment of multiple models appear nearly trivial, traditionally the application and tuning of even one of these algorithms required many years of study. As a result, machine learning practitioners tended to have strong preferences for particular (and likely more familiar) models over others.
+Selección de modelos
+--------------------
+Las discusiones sobre el machine learning se caracterizan con frecuencia por un enfoque singular en la selección de modelos. Ya sea regresión logística, bosques aleatorios, métodos bayesianos o redes neuronales artificiales, los profesionales del machine learning a menudo se apresuran a expresar sus preferencias. La razón de esto es principalmente histórica. Aunque las bibliotecas modernas de machine learning de terceros han hecho que la implementación de múltiples modelos parezca casi trivial, tradicionalmente la aplicación y el desarrollo de incluso uno de estos algoritmos, los cuales requirieron muchos años de estudio. Como resultado, los profesionales del machine learning tendían a tener fuertes preferencias por modelos particulares (y probablemente más familiares) sobre otros.
 
-However, model selection is a bit more nuanced than simply picking the "right" or "wrong" algorithm. In practice, the workflow includes:
+Sin embargo, la selección de modelos es un poco más matizada que simplemente elegir el algoritmo "correcto" o "incorrecto". En la práctica, el flujo de trabajo incluye:
 
-  1. selecting and/or engineering the smallest and most predictive feature set
-  2. choosing a set of algorithms from a model family
-  3. tuning the algorithm hyperparameters to optimize performance
+  1. Seleccionar y/o diseñar el conjunto de características más pequeño y predictivo
+  2. Elegir un conjunto de algoritmos de una familia de modelos
+  3. Ajuste de los hiperparámetros del algoritmo para optimizar el rendimiento
 
-The **model selection triple** was first described in a 2015 SIGMOD_ paper by Kumar et al. In their paper, which concerns the development of next-generation database systems built to anticipate predictive modeling, the authors cogently express that such systems are badly needed due to the highly experimental nature of machine learning in practice. "Model selection," they explain, "is iterative and exploratory because the space of [model selection triples] is usually infinite, and it is generally impossible for analysts to know a priori which [combination] will yield satisfactory accuracy and/or insights."
-
-
-Who is Yellowbrick for?
------------------------
-
-Yellowbrick ``Visualizers`` have multiple use cases:
-
- - For data scientists, they can help evaluate the stability and predictive value of machine learning models and improve the speed of the experimental workflow.
- - For data engineers, Yellowbrick provides visual tools for monitoring model performance in real world applications.
- - For users of models, Yellowbrick provides visual interpretation of the behavior of the model in high dimensional feature space.
- - For teachers and students, Yellowbrick is a framework for teaching and understanding a large variety of algorithms and methods.
+La **triple de selección de modelos** fue descrita por primera vez en un artículo 2015 SIGMOD_ por Kumar y otros. En su artículo, que se refiere al desarrollo de sistemas de bases de datos de próxima generación construidos para anticipar el modelado predictivo, los autores expresan convincentemente que tales sistemas son muy necesarios debido a la naturaleza altamente experimental del machine learning en la práctica. "La selección de modelos", explican, "es iterativa y exploratoria porque el espacio de [triples de selección de modelos] suele ser infinito, y generalmente es imposible para los analistas saber a priori qué [combinación] producirá una precisión y/o conocimientos satisfactorios".
 
 
-Name Origin
------------
-The Yellowbrick package gets its name from the fictional element in the 1900 children's novel **The Wonderful Wizard of Oz** by American author L. Frank Baum. In the book, the yellow brick road is the path that the protagonist, Dorothy Gale, must travel in order to reach her destination in the Emerald City.
+¿Para quién es Yellowbrick?
+---------------------------
 
-From Wikipedia_:
-    "The road is first introduced in the third chapter of The Wonderful Wizard of Oz. The road begins in the heart of the eastern quadrant called Munchkin Country in the Land of Oz. It functions as a guideline that leads all who follow it, to the road's ultimate destination—the imperial capital of Oz called Emerald City that is located in the exact center of the entire continent. In the book, the novel's main protagonist, Dorothy, is forced to search for the road before she can begin her quest to seek the Wizard. This is because the cyclone from Kansas did not release her farmhouse closely near it as it did in the various film adaptations. After the council with the native Munchkins and their dear friend the Good Witch of the North, Dorothy begins looking for it and sees many pathways and roads nearby, (all of which lead in various directions). Thankfully it doesn't take her too long to spot the one paved with bright yellow bricks."
+Los ``Visualizers`` Yellowbrick tienen múltiples casos de uso:
 
-Team
-----
+ - Para los científicos de datos, pueden ayudar a evaluar la estabilidad y el valor predictivo de los modelos de machine learning y mejorar la velocidad del flujo de trabajo experimental.
+ - Para los ingenieros de datos, Yellowbrick proporciona herramientas visuales para monitorear el rendimiento del modelo en aplicaciones del mundo real.
+ - Para los usuarios de modelos, Yellowbrick proporciona una interpretación visual del comportamiento del modelo en el espacio de características de alta dimensión.
+ - Para profesores y estudiantes, Yellowbrick es un marco para la enseñanza y la comprensión de una gran variedad de algoritmos y métodos.
 
-Yellowbrick is developed by volunteer data scientists who believe in open source and the project enjoys contributions from Python developers all over the world. The project was started by `@rebeccabilbro`_ and `@bbengfort`_ as an attempt to better explain machine learning concepts to their students at Georgetown University where they teach a data science certificate program. They quickly realized, however, that the potential for visual steering could have a large impact on practical data science and developed it into a production-ready Python library.
 
-Yellowbrick was then incubated by District Data Labs (DDL) in partnership with Georgetown University. District Data Labs is an organization that is dedicated to open source development and data science education and provided resources to help Yellowbrick grow. Yellowbrick was first introduced to the Python Community at `PyCon 2016 <https://youtu.be/c5DaaGZWQqY>`_ in both talks and during the development sprints. The project was then carried on through DDL Research Labs -- semester-long sprints where members of the DDL community contribute to various data-related projects.
+Origen del nombre
+-----------------
+El paquete Yellowbrick recibe su nombre del elemento ficticio en la novela infantil de 1900 **El maravilloso mago de Oz** del autor estadounidense L. Frank Baum. En el libro, el camino de ladrillo amarillo es el camino que la protagonista, Dorothy Gale, debe recorrer para llegar a su destino en la Ciudad Esmeralda.
 
-Since then, Yellowbrick has enjoyed the participation of a large number of contributors from around the world and growing support in the PyData community. Yellowbrick has been featured in talks at PyData, Scipy, NumFOCUS, and PSF organized events as well as blog posts and Kaggle competitions. We are so thrilled to have such a dedicated community involved in active contributions both large and small.
+Desde Wikipedia_:
+    "El camino se introduce por primera vez en el tercer capítulo de El maravilloso mago de Oz. El camino comienza en el corazón del cuadrante oriental llamado Munchkin Country en la Tierra de Oz. Funciona como una guía que lleva a todos los que la siguen, al destino final de la carretera: la capital imperial de Oz llamada Ciudad Esmeralda que se encuentra en el centro exacto de todo el continente. En el libro, la protagonista principal de la novela, Dorothy, se ve obligada a buscar el camino antes de que pueda comenzar su búsqueda para buscar al Mago. Esto se debe a que el ciclón de Kansas no soltó su granja cerca de ella como lo hizo en las diversas adaptaciones cinematográficas. Después del concilio con los nativos Munchkins y su querida amiga la Bruja Buena del Norte, Dorothy comienza a buscarla y ve muchos caminos y caminos cercanos, (todos los cuales conducen en varias direcciones). Afortunadamente, no le lleva demasiado tiempo ver el pavimentado con ladrillos amarillos brillantes".
 
-For a full list of current maintainers and core contributors, please see `MAINTAINERS.md <https://github.com/DistrictDataLabs/yellowbrick/blob/develop/MAINTAINERS.md>`_ in the root of our GitHub repository. Thank you so much to everyone who has `contributed to Yellowbrick <https://github.com/DistrictDataLabs/yellowbrick/graphs/contributors>`_!
+Equipo
+------
 
-Affiliations
+Yellowbrick está desarrollado por científicos de datos voluntarios que creen en el código abierto y el proyecto disfruta de contribuciones de desarrolladores de Python de todo el mundo. El Proyecto fue iniciado por `@rebeccabilbro`_ y `@bbengfort`_ como un intento de explicar mejor los conceptos de machine learning a sus estudiantes en la Universidad de Georgetown, donde enseñan un programa de certificación de ciencia de datos. Sin embargo, rápidamente se dieron cuenta de que el potencial para la dirección visual podría tener un gran impacto en la ciencia de datos práctica y lo desarrollaron en una biblioteca python lista para la producción.
+
+Yellowbrick fue incubado por District Data Labs (DDL) en asociación con la Universidad de Georgetown. District Data Labs es una organización que se dedica al desarrollo de código abierto y la educación en ciencia de datos y proporcionó recursos para ayudar a Yellowbrick a crecer. Yellowbrick se introdujo por primera vez en la comunidad python en `PyCon 2016 <https://youtu.be/c5DaaGZWQqY>`_ tanto en charlas como durante los sprints de desarrollo. El proyecto se llevó a cabo a través de DDL Research Labs, sprints de un semestre de duración donde los miembros de la comunidad DDL contribuyen a varios proyectos relacionados con los datos.
+
+Desde entonces, Yellowbrick ha disfrutado de la participación de un gran número de colaboradores de todo el mundo y un creciente apoyo en la comunidad PyData. Yellowbrick ha aparecido en charlas en eventos organizados por PyData, Scipy, NumFOCUS y PSF, así como en publicaciones de blog y competiciones de Kaggle. Estamos tan motivados por tener una comunidad tan dedicada involucrada en contribuciones activas, tanto grandes como pequeñas.
+
+Para obtener una lista completa de los servicios de mantenimiento actuales y los contribuyentes principales, consulta `MAINTAINERS.md <https://github.com/DistrictDataLabs/yellowbrick/blob/develop/MAINTAINERS.md>`_ en el almacén de datos de GitHub. ¡Muchas gracias a todos los que han `contribuido a Yellowbrick <https://github.com/DistrictDataLabs/yellowbrick/graphs/contributors>`_!
+
+Afiliaciones
 ------------
 
-Yellowbrick is proud to be affiliated with several organizations that provide institutional support to the project. Such support is sometimes financial, often material, and always in the spirit of free and open source software. We can't thank them enough for their role in making Yellowbrick what it is today.
+Yellowbrick se enorgullece de estar afiliado a varias organizaciones que brindan apoyo institucional al proyecto. Tal apoyo es a veces financiero, a menudo material, y siempre en el espíritu del software libre y de código abierto. No podemos agradecerles lo suficiente por su papel en hacer de Yellowbrick lo que es hoy.
 
-`District Data Labs`_: District Data Labs incubated Yellowbrick and sponsors research labs by purchasing food and organizing events. Research labs are semester long sprints that allow Yellowbrick contributors to meet in person, share a meal, and hack on the project. DDL also sponsors travel to PyCon and PyData conferences for Yellowbrick maintainers and helps us buy promotional material such as stickers and t-shirts.
+`District Data Labs`_: District Data Labs incubó Yellowbrick y patrocina laboratorios de investigación mediante la compra de alimentos y la organización de eventos. Los laboratorios de investigación son sprints de un semestre de duración que permiten a los productores de Yellowbrick reunirse en persona, compartir una comida y participar en el proyecto. DDL también patrocina viajes a las conferencias PyCon y PyData para los que ofrecen servicio de mantenimiento en Yellowbrick y nos ayuda a comprar material promocional como stickers y camisetas.
 
-`NumFOCUS`_: Yellowbrick is a NumFOCUS affiliated project (not a fiscally sponsored project). Our relationship with NumFOCUS has given us a lot of data science cred in the community by being listed on their website. We are also eligible to apply for small development grants and infrastructure support. We often participate in the project developers mailing list and other activities such as Google Summer of Code.
+`NumFOCUS`_: Yellowbrick es un proyecto afiliado a NumFOCUS (no un proyecto patrocinado fiscalmente). Nuestra relación con NumFOCUS nos ha dado mucha credibilidad en la ciencia de datos en la comunidad al aparecer en su sitio web. También somos elegibles para solicitar pequeñas campañas de desarrollo y apoyo a la infraestructura. A menudo participamos en la lista de correo de desarrolladores de proyectos y otras actividades como Google Summer of Code.
 
-`Georgetown University`_: Georgetown primarily provides space for Yellowbrick events including the research labs. Additionally, Georgetown Data Science Certificate students are introduced to Yellowbrick at the beginning of their machine learning education and we often perform user testing of new features on them!
+`Georgetown University`_: Georgetown proporciona principalmente espacio para eventos de Yellowbrick, incluidos los laboratorios de investigación. Además, los estudiantes del Certificado de Ciencia de Datos de Georgetown son introducidos a Yellowbrick al comienzo de su educación de machine learning y a menudo realizamos pruebas de usuario de nuevas características en ellos.
 
-How to Support Yellowbrick
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cómo apoyar a Yellowbrick
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Yellowbrick es desarrollado por voluntarios que trabajan en el proyecto en su tiempo libre y no como parte de su trabajo regular a tiempo completo. Si Yellowbrick se ha vuelto crítico para el éxito de su organización, considere retribuir a Yellowbrick.
 
-Yellowbrick is developed by volunteers who work on the project in their spare time and not as part of their regular full-time work. If Yellowbrick has become critical to the success of your organization, please consider giving back to Yellowbrick.
+    "... El código abierto prospera con recursos humanos en lugar de financieros. Allí
+    hay muchas maneras de hacer crecer los recursos humanos, como la distribución de los
+    carga de trabajo entre más contribuyentes o animar a las empresas a
+    hacer que el código abierto forme parte del trabajo de sus empleados. Un
+    La estrategia de soporte debe incluir múltiples formas de generar tiempo y
+    recursos además de financiar directamente el desarrollo. Debe comenzar desde
+    el principio de que el enfoque de código abierto no es intrínsecamente defectuoso,
+    sino más bien de origen insuficiente".
 
-    "... open source thrives on human rather than financial resources. There
-    are many ways to grow human resources, such as distributing the
-    workload among more contributors or encouraging companies to
-    make open source part of their employees’ work. An effective
-    support strategy must include multiple ways to generate time and
-    resources besides directly financing development. It must start from
-    the principle that the open source approach is not inherently flawed,
-    but rather under-resourced."
+    -- `'Carreteras y puentes: el trabajo invisible detrás de nuestra infraestructura digital <https://www.fordfoundation.org/about/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/>`_
 
-    -- `Roads and Bridges: The Unseen Labor Behind our Digital Infrastructure <https://www.fordfoundation.org/about/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/>`_
+Lo principal que necesitan los servicios de mantenimiento de Yellowbrick es *tiempo*. Hay muchas maneras de proporcionar ese tiempo a través de mecanismos no financieros como:
 
-The main thing that the Yellowbrick maintainers need is *time*. There are many ways to provide that time through non-financial mechanisms such as:
+- Crear una política escrita en el manual de su empresa que dedique tiempo para que sus empleados contribuyan a proyectos de código abierto como Yellowbrick.
+- Interactuar con nuestra comunidad dando aliento y asesoramiento, particularmente para la planificación a largo plazo y actividades no relacionadas con el código, como el diseño y la documentación.
+- Abogar y evangelizar el uso de Yellowbrick y otro software de código abierto através de publicaciones de blog y redes sociales.
+- Considerar estrategias de apoyo a largo plazo en lugar de acciones ad hoc o únicas.
+- Enseñe a sus estudiantes Machine Learning con Yellowbrick.
 
-- Create a written policy in your company handbook that dedicates time for your employees to contribute to open source projects like Yellowbrick.
-- Interact with our community giving encouragement and advice, particularly for long term planning and non-code related activities like design and documentation.
-- Advocate and evangelize your use of Yellowbrick and other open source software through blog posts and social media.
-- Consider long term support strategies rather than ad hoc or one-off actions.
-- Teach your students Machine Learning with Yellowbrick.
+Un apoyo más concreto y financiero también es bienvenido, especialmente si se dirige a través de un esfuerzo específico. Si está interesado en este tipo de apoyo, considere:
 
-More concrete and financial support is also welcome, particularly if it's directed through a specific effort. If you are interested in this kind of support consider:
+- Hacer una donación a NumFOCUS en nombre de Yellowbrick.
+- Involucrar a District Data Labs para capacitación corporativa sobre machine learning visual con Yellowbrick (que apoyará directamente a los servicios de mantenimiento de Yellowbrick).
+- Apoyar la educación profesional continua de su empleado en el Certificado de Ciencia de Datos de Georgetown.
+- Proporcionar apoyo a largo plazo para costes fijos como el alojamiento o hosting.
 
-- Making a donation to NumFOCUS on behalf of Yellowbrick.
-- Engaging District Data Labs for coporate training on visual machine learning with Yellowbrick (which will directly support Yellowbrick maintainers).
-- Supporting your employee's continuing professional education in the Georgetown Data Science Certificate.
-- Providing long term support for fixed costs such as hosting.
+La misión de Yellowbrick es mejorar el flujo de trabajo de machine learning a través de la dirección visual y el diagnóstico de código abierto. Si estás interesado en una relación de afiliación más formal para apoyar esta misión, contáctese con nosotros directamente.
 
-Yellowbrick's mission is to enhance the machine learning workflow through open source visual steering and diagnostics. If you're interested in a more formal affiliate relationship to support this mission, please get in contact with us directly.
+Licencia
+--------
 
-License
--------
+Yellowbrick es un proyecto de código abierto y su `license <https://github.com/DistrictDataLabs/yellowbrick/blob/master/LICENSE.txt>`_ es una implementación de la licencia FOSS `Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0>`_ license by the Apache Software Foundation. `En lenguaje simple <https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)>`_ esto significa que puede usar Yellowbrick con fines comerciales, modificar y distribuir el código fuente e incluso sublicenciarlo. Queremos que uses Yellowbrick, te beneficies de él y contribuyas si haces cosas geniales con él.
 
-Yellowbrick is an open source project and its `license <https://github.com/DistrictDataLabs/yellowbrick/blob/master/LICENSE.txt>`_ is an implementation of the FOSS `Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0>`_ license by the Apache Software Foundation. `In plain English <https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)>`_ this means that you can use Yellowbrick for commercial purposes, modify and distribute the source code, and even sublicense it. We want you to use Yellowbrick, profit from it, and contribute back if you do cool things with it.
+Hay, sin embargo, un par de requisitos que te pedimos. Primero, cuando copies o distribuyas el código fuente de Yellowbrick, incluye nuestros derechos de autor y licencia que se encuentran en la `LICENSE.txt <https://github.com/DistrictDataLabs/yellowbrick/blob/master/LICENSE.txt>`_ en la raíz del almacenamiento de datos de software. Además, si creamos un archivo llamado "AVISO" en nuestro proyecto también debes incluirlo en tu distribución de origen. ¡El archivo "AVISO" incluirá atribución y agradecimiento a aquellos que han trabajado tan duro en el proyecto! Ten en cuenta que no puede usar nuestros nombres, marcas comerciales o logotipos para promocionar su trabajo o de ninguna otra manera que no sea para hacer referencia a Yellowbrick. Finalmente, proporcionamos a Yellowbrick sin garantía y no puede responsabilizar a ningún colaborador o afiliado de Yellowbrick por su uso de nuestro software.
 
-There are, however, a couple of requirements that we ask from you. First, when you copy or distribute Yellowbrick source code, please include our copyright and license found in the `LICENSE.txt <https://github.com/DistrictDataLabs/yellowbrick/blob/master/LICENSE.txt>`_ at the root of our software repository. In addition, if we create a file called "NOTICE" in our project you must also include that in your source distribution. The "NOTICE" file will include attribution and thanks to those who have worked so hard on the project! Note that you may not use our names, trademarks, or logos to promote your work or in any other way than to reference Yellowbrick. Finally, we provide Yellowbrick with no warranty and you can't hold any Yellowbrick contributor or affiliate liable for your use of our software.
+Creemos que es un trato bastante justo, y somos grandes creyentes en el código abierto. Si realiza algún cambio en su software, lo usa comercial o académicamente, o tiene algún otro interés, nos encantaría conocerlo.
 
-We think that's a pretty fair deal, and we're big believers in open source. If you make any changes to our software, use it commercially or academically, or have any other interest, we'd love to hear about it.
+Presentaciones
+--------------
 
-Presentations
--------------
+Yellowbrick ha disfrutado del centro de atención en varias presentaciones en conferencias recientes. Esperamos que estos libros, charlas y diapositivas te ayuden a entender Yellowbrick un poco mejor.
 
-Yellowbrick has enjoyed the spotlight in several presentations at recent conferences. We hope that these notebooks, talks, and slides will help you understand Yellowbrick a bit better.
-
-Papers:
+Documentos:
     - `Yellowbrick: Visualizing the Scikit-Learn Model Selection Process <http://joss.theoj.org/papers/10.21105/joss.01075>`_
 
-Conference Presentations (videos):
+Conferencias (videos):
     - `Visual Diagnostics for More Informed Machine Learning: Within and Beyond Scikit-Learn (PyCon 2016) <https://youtu.be/c5DaaGZWQqY>`_
     - `Yellowbrick: Steering Machine Learning with Visual Transformers (PyData London 2017) <https://youtu.be/2ZKng7pCB5k>`_
 
-Jupyter Notebooks:
+Cuadernos Jupyter:
     - `Data Science Delivered: ML Regression Predications <https://github.com/ianozsvald/data_science_delivered/blob/master/ml_explain_regression_prediction.ipynb>`_
 
-Slides:
+Diapositivas:
     - `Machine Learning Libraries You'd Wish You'd Known About (PyData Budapest 2017) <https://speakerdeck.com/ianozsvald/machine-learning-libraries-youd-wish-youd-known-about-1>`_
     - `Visualizing the Model Selection Process <https://www.slideshare.net/BenjaminBengfort/visualizing-the-model-selection-process>`_
     - `Visualizing Model Selection with Scikit-Yellowbrick <https://www.slideshare.net/BenjaminBengfort/visualizing-model-selection-with-scikityellowbrick-an-introduction-to-developing-visualizers>`_
     - `Visual Pipelines for Text Analysis (Data Intelligence 2017) <https://speakerdeck.com/dataintelligence/visual-pipelines-for-text-analysis>`_
 
 
-Citing Yellowbrick
-------------------
+Citar a Yellowbrick
+-------------------
 
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1206239.svg
    :target: https://doi.org/10.5281/zenodo.1206239
@@ -137,7 +136,7 @@ Citing Yellowbrick
 .. image:: http://joss.theoj.org/papers/10.21105/joss.01075/status.svg
    :target: https://doi.org/10.21105/joss.01075
 
-We hope that Yellowbrick facilitates machine learning of all kinds and we're particularly fond of academic work and research. If you're writing a scientific publication that uses Yellowbrick you can cite *Bengfort et al. (2018)* with the following BibTex:
+Esperamos que Yellowbrick facilite el machine learning de todo tipo y nos gusta especialmente el trabajo académico y la investigación. Si estás escribiendo una publicación científica que usa Yellowbrick, puedes citar *Bengfort et al. (2018)* con el siguiente BibTex:
 
 .. code-block:: bibtex
 
@@ -163,9 +162,9 @@ We hope that Yellowbrick facilitates machine learning of all kinds and we're par
         doi = {10.5281/zenodo.1206264}
     }
 
-You can also find DOI (digital object identifiers) for every version of Yellowbrick on `zenodo.org <https://doi.org/10.5281/zenodo.1206239>`_; use the BibTeX on this site to reference specific versions or changes made to the software.
+También puede encontrar DOI (identificadores de objetos digitales) para cada versión de Yellowbrick en `zenodo.org <https://doi.org/10.5281/zenodo.1206239>`_; utilizar el BibTeX en este sitio para hacer referencia a versiones específicas o cambios realizados en el software.
 
-We've also published a paper in the `Journal of Open Source Software (JOSS) <http://joss.theoj.org/papers/10.21105/joss.01075>`_ that discusses how Yellowbrick is designed to influence the model selection workflow. You may cite this paper if you are discussing Yellowbrick more generally in your research (instead of a specific version) or are interested in discussing visual analytics or visualization for machine learning. Please cite *Bengfort and Bilbro (2019)* with the following BibTex:
+También hemos publicado un artículo en el `Journal of Open Source Software (JOSS) <http://joss.theoj.org/papers/10.21105/joss.01075>`_ que analiza cómo Yellowbrick está diseñado para influir en el flujo de trabajo de selección de modelos. Puedes citar este documento si estás discutiendo Yellowbrick de manera más general en su investigación (en lugar de una versión específica) o si estás interesado en discutir el análisis visual o la visualización para el machine learning. Por favor, cite *Bengfort and Bilbro (2019)* con el siguiente BibTex:
 
 .. code-block:: bibtex
 
@@ -182,15 +181,16 @@ We've also published a paper in the `Journal of Open Source Software (JOSS) <htt
         doi = {10.21105/joss.01075}
     }
 
-Contacting Us
--------------
+Contáctanos
+-----------
 
-The best way to contact the Yellowbrick team is to send us a note on one of the following platforms:
+La mejor manera de contactar con el equipo de Yellowbrick es enviarnos un correo o nota en una de las siguientes plataformas:
 
-- Send an email via our `mailing list`_.
-- Direct message us on `Twitter`_.
-- Ask a question on `Stack Overflow`_.
-- Report an issue on our `GitHub Repo`_.
+- Enviar un correo electrónico a través `mailing list`_.
+- Envíenos un mensaje directo en `Twitter`_.
+- Haga una pregunta en `Stack Overflow`_.
+- Reportar un problema en nuestro `GitHub Repo`_.
+
 
 .. _`GitHub Repo`: https://github.com/DistrictDataLabs/yellowbrick
 .. _`mailing list`: http://bit.ly/yb-listserv
